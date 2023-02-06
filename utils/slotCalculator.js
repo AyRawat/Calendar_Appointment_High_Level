@@ -39,8 +39,10 @@ async function slotCalculator(
 
 function getAllSlots(startTime, endTime, duration, timezone) {
   let allSlots = [];
+
   let sTime = moment(startTime, "HH:mm").tz(timezone);
   let eTime = moment(endTime, "HH:mm").tz(timezone);
+  console.log("Details from GetAll SLots", startTime, endTime, timezone, sTime, eTime);
   while (sTime < eTime) {
     allSlots.push(sTime.format("HH:mm"));
     sTime.add(duration, "minutes");
