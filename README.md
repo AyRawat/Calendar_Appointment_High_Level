@@ -80,7 +80,7 @@ npm run serve
 
 ## DB Details
 
-I am using only one collection "Appointments" to save all the booked slots. 
+I am using one collection named  "Appointments" to save all the booked slots. 
  Every document has 
   1. startTime
   2. endTime
