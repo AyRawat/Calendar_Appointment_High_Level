@@ -33,7 +33,7 @@ async function slotCalculator(
 ) {
   const allSlots = getAllSlots(startTime, endTime, duration, timezone);
   const availableSlots = difference(allSlots, bookedSlots);
-  const result = await getAllSlotsForDay(date, allSlots,timezone);
+  const result = await getAllSlotsForDay(date, availableSlots,timezone);
   return result;
 }
 
@@ -42,7 +42,6 @@ function getAllSlots(startTime, endTime, duration, timezone) {
 
   let sTime = moment(startTime, "HH:mm").tz(timezone);
   let eTime = moment(endTime, "HH:mm").tz(timezone);
-  console.log("Details from GetAll SLots", startTime, endTime, timezone, sTime, eTime);
   while (sTime < eTime) {
     allSlots.push(sTime.format("HH:mm"));
     sTime.add(duration, "minutes");

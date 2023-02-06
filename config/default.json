@@ -1,7 +1,7 @@
 {
   "server": {
-    "startTime": "09:00",
-    "endTime": "17:00",
+    "startTime": "03:30",
+    "endTime": "12:00",
     "duration": "30",
     "timeZone": "IST"
   }
